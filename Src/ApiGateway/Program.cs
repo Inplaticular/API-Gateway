@@ -23,10 +23,9 @@ if (app.Environment.IsDevelopment()) {
 }
 
 app.UseHttpsRedirection();
-app.UseAuthorization();
 
 app.MapControllers();
 
-app.UseOcelot();
+app.UseOcelot().Wait();
 
 app.Run();
