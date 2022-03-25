@@ -1,187 +1,247 @@
 {
-    "GlobalConfiguration": {
-        "BaseUrl": "http://localhost:7005"
-    },
-    "Routes": [
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:7005"
+  },
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/v1/authentication/signup",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
         {
-            "DownstreamPathTemplate": "/v1/authentication/signup",
-            "DownstreamScheme": "http",
-            "DownstreamHostAndPorts": [
-                {
-                    "Host": "identity_api",
-                    "Port": 7001
-                }
-            ],
-            "UpstreamPathTemplate": "/api/identity/v1/authentication/signup",
-            "UpstreamHttpMethod": [ "POST" ]
-        },
-        {
-            "DownstreamPathTemplate": "/v1/authentication/login",
-            "DownstreamScheme": "http",
-            "DownstreamHostAndPorts": [
-                {
-                    "Host": "identity_api",
-                    "Port": 7001
-                }
-            ],
-            "UpstreamPathTemplate": "/api/identity/v1/authentication/login",
-            "UpstreamHttpMethod": [ "POST" ]
-        },
-        {
-            "DownstreamPathTemplate": "/v1/authentication/requestresetpwd",
-            "DownstreamScheme": "http",
-            "DownstreamHostAndPorts": [
-                {
-                    "Host": "identity_api",
-                    "Port": 7001
-                }
-            ],
-            "UpstreamPathTemplate": "/api/identity/v1/authentication/requestresetpwd",
-            "UpstreamHttpMethod": [ "POST" ]
-        },
-        {
-            "DownstreamPathTemplate": "/v1/authentication/resetpwd",
-            "DownstreamScheme": "http",
-            "DownstreamHostAndPorts": [
-                {
-                    "Host": "identity_api",
-                    "Port": 7001
-                }
-            ],
-            "UpstreamPathTemplate": "/api/identity/v1/authentication/resetpwd",
-            "UpstreamHttpMethod": [ "POST" ]
-        },
-        {
-            "DownstreamPathTemplate": "/v1/authorize/user",
-            "DownstreamScheme": "http",
-            "DownstreamHostAndPorts": [
-                {
-                    "Host": "identity_api",
-                    "Port": 7001
-                }
-            ],
-            "UpstreamPathTemplate": "/api/identity/v1/authorize/user",
-            "UpstreamHttpMethod": [ "POST" ]
-        },
-        {
-            "DownstreamPathTemplate": "/v1/authorize/globalrole",
-            "DownstreamScheme": "http",
-            "DownstreamHostAndPorts": [
-                {
-                    "Host": "identity_api",
-                    "Port": 7001
-                }
-            ],
-            "UpstreamPathTemplate": "/api/identity/v1/authorize/globalrole",
-            "UpstreamHttpMethod": [ "POST" ]
-        },
-        {
-            "DownstreamPathTemplate": "/v1/authorize/userclaim",
-            "DownstreamScheme": "http",
-            "DownstreamHostAndPorts": [
-                {
-                    "Host": "identity_api",
-                    "Port": 7001
-                }
-            ],
-            "UpstreamPathTemplate": "/api/identity/v1/authorize/userclaim",
-            "UpstreamHttpMethod": [ "POST" ]
-        },
-        {
-            "DownstreamPathTemplate": "/v1/information/authentication/users",
-            "DownstreamScheme": "http",
-            "DownstreamHostAndPorts": [
-                {
-                    "Host": "identity_api",
-                    "Port": 7001
-                }
-            ],
-            "UpstreamPathTemplate": "/api/identity/v1/information/authentication/users",
-            "UpstreamHttpMethod": [ "GET" ]
-        },
-        {
-            "DownstreamPathTemplate": "/v1/information/authorization/group",
-            "DownstreamScheme": "http",
-            "DownstreamHostAndPorts": [
-                {
-                    "Host": "identity_api",
-                    "Port": 7001
-                }
-            ],
-            "UpstreamPathTemplate": "/api/identity/v1/information/authorization/group",
-            "UpstreamHttpMethod": [ "GET" ]
-        },
-        {
-            "DownstreamPathTemplate": "/v1/information/authorization/userclaims",
-            "DownstreamScheme": "http",
-            "DownstreamHostAndPorts": [
-                {
-                    "Host": "identity_api",
-                    "Port": 7001
-                }
-            ],
-            "UpstreamPathTemplate": "/api/identity/v1/information/authorization/userclaims",
-            "UpstreamHttpMethod": [ "GET" ]
-        },
-        {
-            "DownstreamPathTemplate": "/v1/authorize/group",
-            "DownstreamScheme": "http",
-            "DownstreamHostAndPorts": [
-                {
-                    "Host": "identity_api",
-                    "Port": 7001
-                }
-            ],
-            "UpstreamPathTemplate": "/api/identity/v1/authorize/group",
-            "UpstreamHttpMethod": [ "PUT", "DELETE" ]
-        },
-        {
-            "DownstreamPathTemplate": "/v1/authorize/group/update",
-            "DownstreamScheme": "http",
-            "DownstreamHostAndPorts": [
-                {
-                    "Host": "identity_api",
-                    "Port": 7001
-                }
-            ],
-            "UpstreamPathTemplate": "/api/identity/v1/authorize/group/update",
-            "UpstreamHttpMethod": [ "POST" ]
-        },
-        {
-            "DownstreamPathTemplate": "/v1/authorize/unit",
-            "DownstreamScheme": "http",
-            "DownstreamHostAndPorts": [
-                {
-                    "Host": "identity_api",
-                    "Port": 7001
-                }
-            ],
-            "UpstreamPathTemplate": "/api/identity/v1/authorize/unit",
-            "UpstreamHttpMethod": [ "PUT", "DELETE" ]
-        },
-        {
-            "DownstreamPathTemplate": "/v1/authorize/unit/update",
-            "DownstreamScheme": "http",
-            "DownstreamHostAndPorts": [
-                {
-                    "Host": "identity_api",
-                    "Port": 7001
-                }
-            ],
-            "UpstreamPathTemplate": "/api/identity/v1/authorize/unit/update",
-            "UpstreamHttpMethod": [ "POST" ]
-        },
-        {
-            "DownstreamPathTemplate": "/v1/authorize/userclaim",
-            "DownstreamScheme": "http",
-            "DownstreamHostAndPorts": [
-                {
-                    "Host": "identity_api",
-                    "Port": 7001
-                }
-            ],
-            "UpstreamPathTemplate": "/api/identity/v1/authorize/userclaim",
-            "UpstreamHttpMethod": [ "PUT", "DELETE" ]
+          "Host": "identity_api",
+          "Port": 7001
         }
-    ]
+      ],
+      "UpstreamPathTemplate": "/api/identity/v1/authentication/signup",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/v1/authentication/login",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "identity_api",
+          "Port": 7001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identity/v1/authentication/login",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/v1/authentication/requestresetpwd",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "identity_api",
+          "Port": 7001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identity/v1/authentication/requestresetpwd",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/v1/authentication/resetpwd",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "identity_api",
+          "Port": 7001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identity/v1/authentication/resetpwd",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/v1/authorize/user",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "identity_api",
+          "Port": 7001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identity/v1/authorize/user",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/v1/authorize/globalrole",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "identity_api",
+          "Port": 7001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identity/v1/authorize/globalrole",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/v1/authorize/userclaim",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "identity_api",
+          "Port": 7001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identity/v1/authorize/userclaim",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/v1/information/authentication/users",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "identity_api",
+          "Port": 7001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identity/v1/information/authentication/users",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/v1/information/authorization/group",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "identity_api",
+          "Port": 7001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identity/v1/information/authorization/group",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/v1/information/authorization/userclaims",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "identity_api",
+          "Port": 7001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identity/v1/information/authorization/userclaims",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/v1/authorization/group",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "identity_api",
+          "Port": 7001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identity/v1/authorization/group",
+      "UpstreamHttpMethod": [ "POST", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/v1/authorization/group/update",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "identity_api",
+          "Port": 7001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identity/v1/authorization/group/update",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+    {
+      "DownstreamPathTemplate": "/v1/authorization/unit",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "identity_api",
+          "Port": 7001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identity/v1/authorization/unit",
+      "UpstreamHttpMethod": [ "POST", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/v1/authorization/unit/update",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "identity_api",
+          "Port": 7001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identity/v1/authorization/unit/update",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+    {
+      "DownstreamPathTemplate": "/v1/authorization/unit/userclaim",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "identity_api",
+          "Port": 7001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identity/v1/authorization/unit/userclaim",
+      "UpstreamHttpMethod": [ "POST", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/v1/gardens",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "garden_api",
+          "Port": 7002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/garden/v1/gardens",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/v1/gardens/list",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "garden_api",
+          "Port": 7002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/garden/v1/gardens/list",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/v1/gardens/permissions",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "garden_api",
+          "Port": 7002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/garden/v1/gardens/permissions",
+      "UpstreamHttpMethod": [ "GET", "POST", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/v1/gardens/permissions/roles",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "garden_api",
+          "Port": 7002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/garden/v1/gardens/permissions/roles",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/v1/plants",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "garden_api",
+          "Port": 7002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/garden/v1/plants",
+      "UpstreamHttpMethod": [ "POST", "DELETE" ]
+    }
+  ]
 }
