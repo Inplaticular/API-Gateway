@@ -88,6 +88,18 @@
       "UpstreamHttpMethod": [ "POST" ]
     },
     {
+      "DownstreamPathTemplate": "/v1/information/authentication/user",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "identity_api",
+          "Port": 7001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identity/v1/information/authentication/user",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
       "DownstreamPathTemplate": "/v1/information/authentication/users",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -242,6 +254,18 @@
       ],
       "UpstreamPathTemplate": "/api/garden/v1/plants",
       "UpstreamHttpMethod": [ "POST", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/v1/plants/plant_data",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "garden_api",
+          "Port": 7002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/garden/v1/plants/plant_data",
+      "UpstreamHttpMethod": [ "GET" ]
     }
   ]
 }
