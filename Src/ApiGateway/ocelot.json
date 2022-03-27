@@ -266,6 +266,30 @@
       ],
       "UpstreamPathTemplate": "/api/garden/v1/plants/plant_data",
       "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/v1/growth",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "calculation_api",
+          "Port": 7003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/calculation/v1/growth",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/v1/yield",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "calculation_api",
+          "Port": 7003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/calculation/v1/yield",
+      "UpstreamHttpMethod": [ "POST" ]
     }
   ]
 }
